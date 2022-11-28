@@ -1,0 +1,12 @@
+@import url(./reset.css);
+
+body {
+    background-color: #f2f3f4;
+}
+
+.container {
+    display: grid;
+    width: min(100% - 30px, 1280px);
+    margin-inline: auto;
+    place-items: center;
+}
