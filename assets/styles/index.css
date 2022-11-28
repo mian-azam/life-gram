@@ -67,3 +67,32 @@ header {
     border-radius: 50%;
     background: url(../media/icons8-t-32.png) #f2f4f6 center no-repeat;
 }
+
+/* ============================================================================== */
+
+.content {
+    margin-top: 20px;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr;
+    gap: 20px;
+}
+
+.form {
+    background-color: #2d572d;
+    width: 60%;
+    height: 300px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.textarea {
+    width: 100%;
+    height: 90%;
+    font-size: 22px;
+    color: #f2f4f6;
+    background-color: #2d572d;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+}
