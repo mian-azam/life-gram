@@ -1,12 +1,69 @@
 @import url(./reset.css);
 
 body {
-    background-color: #f2f3f4;
+    background-color: #202020;
 }
 
 .container {
-    display: grid;
     width: min(100% - 30px, 1280px);
     margin-inline: auto;
-    place-items: center;
+}
+
+header {
+    height: 56px;
+    background-color: rgba(81, 81, 81, 0.5);
+}
+
+.header {
+    display: flex;
+}
+
+.heading {
+    width: 25%;
+}
+
+.heading h1 {
+    color: #28a428;
+    text-align: center;
+}
+
+.nav {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header div nav ul li {
+    display: inline;
+}
+
+.header div nav ul li+li {
+    margin-left: 14px;
+}
+
+.header div nav ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #f2f4f6;
+}
+
+.header div nav ul li a:hover {
+    color: #70dc70;
+    transition: color 0.5s ease-in-out;
+}
+
+.user {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user button {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: url(../media/icons8-t-32.png) #f2f4f6 center no-repeat;
 }
