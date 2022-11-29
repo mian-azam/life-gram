@@ -21,16 +21,17 @@ function addPost() {
 
     let post = document.createElement('div');
     post.classList.add('postStyle');
-    post.innerHTML = `<div class="">
-    <h4">Hello</h4>
+    post.innerHTML = `
+    <div>
+    <h2>Your New Post</h2>
     <p class="post-date">${date}</p>
-</div>
-<div class="post-body">
-    <p>${textarea.value}</p>
-    <div class="post-body-img">
-        <img src="${img}"/>
     </div>
-</div>`;
+    <div>
+    <p>${textarea.value}</p>
+    <div>
+        <img src="${img}">
+    </div>
+    `;
     content.prepend(post);
 }
 

@@ -162,19 +162,30 @@ button:hover {
 }
 
 .dataStyle {
-    background-color: #2d572d;
+    background-color: rgba(242, 244, 246, 0.3);
     width: 60%;
     height: 280px;
-    color: #f2f4f6;
+    color: rgb(49, 165, 49);
     font-size: 24px;
     border-radius: 5px;
     padding: 10px;
 }
 
+
+
 .postStyle {
     background-color: #2d572d;
     width: 60%;
-    height: 300px;
     border-radius: 5px;
     padding: 10px;
+}
+
+p {
+    color: #f2f4f6;
+}
+
+img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
