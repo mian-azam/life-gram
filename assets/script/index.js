@@ -17,7 +17,7 @@ const userInfoBtn = select('.user-info');
 function addPost() {
     window.URL = window.URL || window.webkitURL;
     let img = (postImg.value !== '') ? URL.createObjectURL(postImg.files[0]) : '';
-    let date = new Date().toLocaleDateString({ year: "numeric", month: "numeric", day: "numeric" });
+    let date = new Date().toLocaleDateString();
 
     let post = document.createElement('div');
     post.classList.add('postStyle');
