@@ -18,7 +18,7 @@ class User {
     get name() {
         return this.#name
     }
-    get userName() {
+    getUserName() {
         return this.#userName
     }
     get email() {
