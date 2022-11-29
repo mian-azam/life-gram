@@ -161,6 +161,16 @@ button:hover {
     gap: 20px;
 }
 
+.dataStyle {
+    background-color: #2d572d;
+    width: 60%;
+    height: 280px;
+    color: #f2f4f6;
+    font-size: 24px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
 .postStyle {
     background-color: #2d572d;
     width: 60%;

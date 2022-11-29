@@ -12,6 +12,8 @@ const para = select('.para');
 const textarea = select('.textarea');
 const userInfoBtn = select('.user-info');
 
+
+
 function addPost() {
     window.URL = window.URL || window.webkitURL;
     let img = (postImg.value !== '') ? URL.createObjectURL(postImg.files[0]) : '';
@@ -33,8 +35,11 @@ function addPost() {
 }
 
 function userData() {
+    const subscriber = new Subscriber('#234', 'Mian Azam Mehmood', 'mian-azam', 'tarbelte04@gmail.com', 'Mercedes.Ca, IRCC', 'Pakistani Community in WPG');
+
     let info = document.createElement('div');
-    info.classList.add('postStyle');
+    info.classList.add('dataStyle');
+    info.innerText = `${subscriber.getInfo()}`;
     data.prepend(info);
 }
 
@@ -47,6 +52,7 @@ onEvent('click', btn, function (event) {
 
 onEvent('click', userInfoBtn, function () {
     userData();
+
 });
 
 

@@ -47,6 +47,10 @@ class Subscriber extends User {
     get canMonetize() {
         return this.#canMonetize;
     }
+
+    getInfo() {
+        return `ID: ${this.id} \n Name: ${this.name} \n User Name: ${this.userName} \n Email: ${this.email} \n Pages: ${this.#pages} \n Groups: ${this.#groups}`
+    }
 }
 
 export { User, Subscriber };
