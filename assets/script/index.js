@@ -2,50 +2,55 @@
 'use strict';
 
 import { onEvent, select } from "./functions.js";
-import { Shapes } from "./shapes.js";
+import { User, Subscriber } from "./classes.js";
 
-const btn = select('.btn');
-const parent = select('.parent');
-const shapes = select('.shapes');
-const colors = select('.colors');
+const btn = select('.post-btn');
+const data = select('.data');
+const content = select('.content');
+const postImg = select('.post-img');
 const para = select('.para');
+const textarea = select('.textarea');
+const userInfoBtn = select('.user-info');
 
-const myColors = {
-    Blue: '#0080ff',
-    Green: '#9f0',
-    Orange: '#f90',
-    Pink: '#f09',
-    Purple: '#8000ff'
+function addPost() {
+    window.URL = window.URL || window.webkitURL;
+    let img = (postImg.value !== '') ? URL.createObjectURL(postImg.files[0]) : '';
+    let date = new Date().toLocaleDateString({ year: "numeric", month: "numeric", day: "numeric" });
+
+    let post = document.createElement('div');
+    post.classList.add('postStyle');
+    post.innerHTML = `<div class="">
+    <h4">Hello</h4>
+    <p class="post-date">${date}</p>
+</div>
+<div class="post-body">
+    <p>${textarea.value}</p>
+    <div class="post-body-img">
+        <img src="${img}"/>
+    </div>
+</div>`;
+    content.prepend(post);
 }
 
-const array = [];
-
-function createShape() {
-    const shape = document.createElement('div');
-    shape.classList.add(shapes.value);
-    parent.appendChild(shape);
-    shape.style.backgroundColor = myColors[colors.value];
-
-    array.push(shape);
-
-    onEvent('click', shape, function () {
-        para.innerText = `Unit ${array.indexOf(shape) + 1} : ${colors.value}  ${shapes.value}`;
-    });
+function userData() {
+    let info = document.createElement('div');
+    info.classList.add('postStyle');
+    data.prepend(info);
 }
 
 
-let count = 0;
-onEvent('click', btn, function () {
-    if (count > 23) {
-        para.innerText = 'Max Shapes reached';
-        return;
-    }
 
-    createShape();
-
-    count += 1;
-
-
+onEvent('click', btn, function (event) {
+    event.preventDefault();
+    addPost();
 });
+
+onEvent('click', userInfoBtn, function () {
+    userData();
+});
+
+
+
+
 
 

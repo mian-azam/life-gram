@@ -70,7 +70,7 @@ header {
 
 /* ============================================================================== */
 
-.content {
+.data {
     margin-top: 20px;
     display: grid;
     place-items: center;
@@ -146,4 +146,25 @@ header {
 button:hover {
     background-color: #127b12;
     transition: all 0.1s ease-in-out;
+}
+
+/* ============================================================================== */
+
+
+
+.content {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr;
+    gap: 20px;
+}
+
+.postStyle {
+    background-color: #2d572d;
+    width: 60%;
+    height: 300px;
+    border-radius: 5px;
+    padding: 10px;
 }
